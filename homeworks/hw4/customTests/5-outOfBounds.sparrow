@@ -1,0 +1,69 @@
+func Mainmain()
+v0 = 4
+v1 = alloc(v0)
+v2 = 4
+vmt_A = alloc(v2)
+v3 = @Arun
+[vmt_A + 0 ] = v3
+[v1 + 0] = vmt_A
+if0 v1 goto v1Error
+goto v1End
+v1Error:
+error("null pointer")
+v1End:
+v4 = [v1 + 0]
+v4 = [v4 + 0]
+v5 = call v4(v1)
+print(v5)
+trivial = 0
+return trivial
+func Arun(this)
+v6 = 20
+v7 = 1
+v8 = 4
+v9 = v6 + v7
+v9 = v9 * v8
+v10 = alloc( v9)
+if0 v10 goto v10Error
+goto v10End
+v10Error:
+error("null pointer")
+v10End:
+[v10 + 0] = v6
+a = v10
+v11 = 10
+v12 = 4
+v13 = 5
+v14 = v12 - v13
+v15 = v14 < v11
+v16 = [a + 0]
+v17 = v11 < v16
+v18 = v15 * v17
+if0 v18 goto v15Error
+goto v15End
+v15Error:
+error("array index out of bounds")
+v15End:
+v19 = v12 * v11
+v19 = v19 + v12
+v20 = a + v19
+v20 = [v20 + 0]
+print(v20)
+v21 = 40
+v22 = 4
+v23 = 5
+v24 = v22 - v23
+v25 = v24 < v21
+v26 = [a + 0]
+v27 = v21 < v26
+v28 = v25 * v27
+if0 v28 goto v25Error
+goto v25End
+v25Error:
+error("array index out of bounds")
+v25End:
+v29 = v22 * v21
+v29 = v29 + v22
+v30 = a + v29
+v30 = [v30 + 0]
+return v30

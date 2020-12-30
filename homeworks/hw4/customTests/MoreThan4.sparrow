@@ -1,0 +1,48 @@
+func MoreThan4main()
+v0 = 4
+v1 = alloc(v0)
+v2 = 8
+vmt_MT4 = alloc(v2)
+v3 = @MT4Start
+[vmt_MT4 + 0 ] = v3
+v4 = @MT4Change
+[vmt_MT4 + 4 ] = v4
+[v1 + 0] = vmt_MT4
+if0 v1 goto v1Error
+goto v1End
+v1Error:
+error("null pointer")
+v1End:
+v5 = [v1 + 0]
+v5 = [v5 + 0]
+v7 = 1
+v8 = 2
+v9 = 3
+v10 = 4
+v11 = 5
+v12 = 6
+v6 = call v5(v1 v7 v8 v9 v10 v11 v12)
+print(v6)
+trivial = 0
+return trivial
+func MT4Start(this p1 p2 p3 p4 p5 p6)
+print(p1)
+print(p2)
+print(p3)
+print(p4)
+print(p5)
+print(p6)
+v13 = [this + 0]
+v13 = [v13 + 4]
+v14 = call v13(this p6 p5 p4 p3 p2 p1)
+aux = v14
+return aux
+func MT4Change(this p1 p2 p3 p4 p5 p6)
+print(p1)
+print(p2)
+print(p3)
+print(p4)
+print(p5)
+print(p6)
+v15 = 0
+return v15

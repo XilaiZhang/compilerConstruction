@@ -1,0 +1,434 @@
+func BubbleSortmain()
+v0 = 12
+v1 = alloc(v0)
+v2 = 16
+vmt_BBS = alloc(v2)
+v3 = @BBSPrint
+[vmt_BBS + 8 ] = v3
+v4 = @BBSInit
+[vmt_BBS + 12 ] = v4
+v5 = @BBSStart
+[vmt_BBS + 0 ] = v5
+v6 = @BBSSort
+[vmt_BBS + 4 ] = v6
+[v1 + 0] = vmt_BBS
+if0 v1 goto v1Error
+goto v1End
+v1Error:
+error("null pointer")
+v1End:
+v7 = [v1 + 0]
+v7 = [v7 + 0]
+v9 = 10
+v8 = call v7(v1 v9)
+print(v8)
+trivial = 0
+return trivial
+func BBSStart(this sz)
+v10 = [this + 0]
+v10 = [v10 + 12]
+v11 = call v10(this sz)
+aux01 = v11
+v12 = [this + 0]
+v12 = [v12 + 8]
+v13 = call v12(this)
+aux01 = v13
+v14 = 99999
+print(v14)
+v15 = [this + 0]
+v15 = [v15 + 4]
+v16 = call v15(this)
+aux01 = v16
+v17 = [this + 0]
+v17 = [v17 + 8]
+v18 = call v17(this)
+aux01 = v18
+v19 = 0
+return v19
+func BBSSort(this)
+v20 = [this + 8]
+v21 = 1
+v22 = v20 - v21
+i = v22
+v23 = 0
+v24 = 1
+v25 = v23 - v24
+aux02 = v25
+loopv26:
+v27 = aux02 < i
+if0 v27 goto v26_end
+v28 = 1
+j = v28
+loopv29:
+v30 = 1
+v31 = i + v30
+v32 = j < v31
+if0 v32 goto v29_end
+v33 = 1
+v34 = j - v33
+aux07 = v34
+v35 = [this + 4]
+v36 = 4
+v37 = 5
+v38 = v36 - v37
+v39 = v38 < aux07
+v40 = [v35 + 0]
+v41 = aux07 < v40
+v42 = v39 * v41
+if0 v42 goto v39Error
+goto v39End
+v39Error:
+error("array index out of bounds")
+v39End:
+v43 = v36 * aux07
+v43 = v43 + v36
+v44 = v35 + v43
+v44 = [v44 + 0]
+aux04 = v44
+v45 = [this + 4]
+v46 = 4
+v47 = 5
+v48 = v46 - v47
+v49 = v48 < j
+v50 = [v45 + 0]
+v51 = j < v50
+v52 = v49 * v51
+if0 v52 goto v49Error
+goto v49End
+v49Error:
+error("array index out of bounds")
+v49End:
+v53 = v46 * j
+v53 = v53 + v46
+v54 = v45 + v53
+v54 = [v54 + 0]
+aux05 = v54
+v55 = aux05 < aux04
+if0 v55 goto v55_else
+v56 = 1
+v57 = j - v56
+aux06 = v57
+v58 = [this + 4]
+v59 = 4
+v60 = 5
+v61 = v59 - v60
+v62 = v61 < aux06
+v63 = [v58 + 0]
+v64 = aux06 < v63
+v65 = v62 * v64
+if0 v65 goto v62Error
+goto v62End
+v62Error:
+error("array index out of bounds")
+v62End:
+v66 = v59 * aux06
+v66 = v66 + v59
+v67 = v58 + v66
+v67 = [v67 + 0]
+t = v67
+v68 = [this + 4]
+v69 = 4
+v70 = 5
+v71 = v69 - v70
+v72 = v71 < j
+v73 = [v68 + 0]
+v74 = j < v73
+v75 = v72 * v74
+if0 v75 goto v72Error
+goto v72End
+v72Error:
+error("array index out of bounds")
+v72End:
+v76 = v69 * j
+v76 = v76 + v69
+v77 = v68 + v76
+v77 = [v77 + 0]
+v78 = [this + 4]
+v79 = 4
+v80 = 5
+v81 = v79 - v80
+v82 = v81 < aux06
+v83 = [v78 + 0]
+v84 = aux06 < v83
+v85 = v82 * v84
+if0 v85 goto v82Error
+goto v82End
+v82Error:
+error("array index out of bounds")
+v82End:
+v86 = v79 * aux06
+v86 = v86 + v79
+v87 = v78 + v86
+[v87 + 0] = v77
+v88 = [this + 4]
+v89 = 4
+v90 = 5
+v91 = v89 - v90
+v92 = v91 < j
+v93 = [v88 + 0]
+v94 = j < v93
+v95 = v92 * v94
+if0 v95 goto v92Error
+goto v92End
+v92Error:
+error("array index out of bounds")
+v92End:
+v96 = v89 * j
+v96 = v96 + v89
+v97 = v88 + v96
+[v97 + 0] = t
+goto v55_end
+v55_else:
+v98 = 0
+nt = v98
+v55_end:
+v99 = 1
+v100 = j + v99
+j = v100
+goto loopv29
+v29_end:
+v101 = 1
+v102 = i - v101
+i = v102
+goto loopv26
+v26_end:
+v103 = 0
+return v103
+func BBSPrint(this)
+v104 = 0
+j = v104
+loopv105:
+v106 = [this + 8]
+v107 = j < v106
+if0 v107 goto v105_end
+v108 = [this + 4]
+v109 = 4
+v110 = 5
+v111 = v109 - v110
+v112 = v111 < j
+v113 = [v108 + 0]
+v114 = j < v113
+v115 = v112 * v114
+if0 v115 goto v112Error
+goto v112End
+v112Error:
+error("array index out of bounds")
+v112End:
+v116 = v109 * j
+v116 = v116 + v109
+v117 = v108 + v116
+v117 = [v117 + 0]
+print(v117)
+v118 = 1
+v119 = j + v118
+j = v119
+goto loopv105
+v105_end:
+v120 = 0
+return v120
+func BBSInit(this sz)
+[this + 8] = sz
+v123 = 1
+v124 = 4
+v125 = sz + v123
+v125 = v125 * v124
+v126 = alloc( v125)
+if0 v126 goto v126Error
+goto v126End
+v126Error:
+error("null pointer")
+v126End:
+[v126 + 0] = sz
+[this + 4] = v126
+v127 = 20
+v128 = 0
+v129 = [this + 4]
+v130 = 4
+v131 = 5
+v132 = v130 - v131
+v133 = v132 < v128
+v134 = [v129 + 0]
+v135 = v128 < v134
+v136 = v133 * v135
+if0 v136 goto v133Error
+goto v133End
+v133Error:
+error("array index out of bounds")
+v133End:
+v137 = v130 * v128
+v137 = v137 + v130
+v138 = v129 + v137
+[v138 + 0] = v127
+v139 = 7
+v140 = 1
+v141 = [this + 4]
+v142 = 4
+v143 = 5
+v144 = v142 - v143
+v145 = v144 < v140
+v146 = [v141 + 0]
+v147 = v140 < v146
+v148 = v145 * v147
+if0 v148 goto v145Error
+goto v145End
+v145Error:
+error("array index out of bounds")
+v145End:
+v149 = v142 * v140
+v149 = v149 + v142
+v150 = v141 + v149
+[v150 + 0] = v139
+v151 = 12
+v152 = 2
+v153 = [this + 4]
+v154 = 4
+v155 = 5
+v156 = v154 - v155
+v157 = v156 < v152
+v158 = [v153 + 0]
+v159 = v152 < v158
+v160 = v157 * v159
+if0 v160 goto v157Error
+goto v157End
+v157Error:
+error("array index out of bounds")
+v157End:
+v161 = v154 * v152
+v161 = v161 + v154
+v162 = v153 + v161
+[v162 + 0] = v151
+v163 = 18
+v164 = 3
+v165 = [this + 4]
+v166 = 4
+v167 = 5
+v168 = v166 - v167
+v169 = v168 < v164
+v170 = [v165 + 0]
+v171 = v164 < v170
+v172 = v169 * v171
+if0 v172 goto v169Error
+goto v169End
+v169Error:
+error("array index out of bounds")
+v169End:
+v173 = v166 * v164
+v173 = v173 + v166
+v174 = v165 + v173
+[v174 + 0] = v163
+v175 = 2
+v176 = 4
+v177 = [this + 4]
+v178 = 4
+v179 = 5
+v180 = v178 - v179
+v181 = v180 < v176
+v182 = [v177 + 0]
+v183 = v176 < v182
+v184 = v181 * v183
+if0 v184 goto v181Error
+goto v181End
+v181Error:
+error("array index out of bounds")
+v181End:
+v185 = v178 * v176
+v185 = v185 + v178
+v186 = v177 + v185
+[v186 + 0] = v175
+v187 = 11
+v188 = 5
+v189 = [this + 4]
+v190 = 4
+v191 = 5
+v192 = v190 - v191
+v193 = v192 < v188
+v194 = [v189 + 0]
+v195 = v188 < v194
+v196 = v193 * v195
+if0 v196 goto v193Error
+goto v193End
+v193Error:
+error("array index out of bounds")
+v193End:
+v197 = v190 * v188
+v197 = v197 + v190
+v198 = v189 + v197
+[v198 + 0] = v187
+v199 = 6
+v200 = 6
+v201 = [this + 4]
+v202 = 4
+v203 = 5
+v204 = v202 - v203
+v205 = v204 < v200
+v206 = [v201 + 0]
+v207 = v200 < v206
+v208 = v205 * v207
+if0 v208 goto v205Error
+goto v205End
+v205Error:
+error("array index out of bounds")
+v205End:
+v209 = v202 * v200
+v209 = v209 + v202
+v210 = v201 + v209
+[v210 + 0] = v199
+v211 = 9
+v212 = 7
+v213 = [this + 4]
+v214 = 4
+v215 = 5
+v216 = v214 - v215
+v217 = v216 < v212
+v218 = [v213 + 0]
+v219 = v212 < v218
+v220 = v217 * v219
+if0 v220 goto v217Error
+goto v217End
+v217Error:
+error("array index out of bounds")
+v217End:
+v221 = v214 * v212
+v221 = v221 + v214
+v222 = v213 + v221
+[v222 + 0] = v211
+v223 = 19
+v224 = 8
+v225 = [this + 4]
+v226 = 4
+v227 = 5
+v228 = v226 - v227
+v229 = v228 < v224
+v230 = [v225 + 0]
+v231 = v224 < v230
+v232 = v229 * v231
+if0 v232 goto v229Error
+goto v229End
+v229Error:
+error("array index out of bounds")
+v229End:
+v233 = v226 * v224
+v233 = v233 + v226
+v234 = v225 + v233
+[v234 + 0] = v223
+v235 = 5
+v236 = 9
+v237 = [this + 4]
+v238 = 4
+v239 = 5
+v240 = v238 - v239
+v241 = v240 < v236
+v242 = [v237 + 0]
+v243 = v236 < v242
+v244 = v241 * v243
+if0 v244 goto v241Error
+goto v241End
+v241Error:
+error("array index out of bounds")
+v241End:
+v245 = v238 * v236
+v245 = v245 + v238
+v246 = v237 + v245
+[v246 + 0] = v235
+v247 = 0
+return v247

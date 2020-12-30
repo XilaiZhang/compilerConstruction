@@ -1,0 +1,163 @@
+func Main()
+t0 = @f
+v1 = t1
+t1 = call t0()
+print( t1)
+v1 = t1
+return v1
+func f()
+t0 = 10
+t1 = 20
+t2 = t0 + t1
+t3 = 30
+t4 = t0 < t3
+if0 t4 goto L8
+t5 = t0 + t2
+s1 = t0 + t1
+goto L10
+L8:
+s4 = t1 + t2
+goto L14
+L10:
+s2 = 50
+t1 = t5 + s2
+s5 = t2 + t5
+s6 = s5 + s1
+print( s6)
+s4 = t2 + s1
+s3 = 40
+t1 = t1 + s3
+goto L8
+L14:
+s7 = 10
+s1 = t0 + s7
+L22:
+t1 = 55
+t4 = 20
+t2 = t0 - t4
+s3 = t1 < t2
+if0 s3 goto L20
+t5 = t2 + t1
+s4 = t5 - s7
+s2 = t5 + s4
+print( s2)
+t1 = t2 + s4
+s8 = 2
+s1 = s8 - t1
+goto L22
+L20:
+s6 = 7
+t1 = s1 + s6
+t2 = t2 + t1
+s8 = 2
+s4 = s8 * t2
+t0 = s1 + s7
+s2 = 55
+s3 = s2
+s6 = @func_g
+t3 = t0 < s3
+if0 t3 goto L27
+s7 = t0 - t4
+two = s8
+twenty = t4
+c = t2
+d = t5
+g = t0
+h = s3
+i = s7
+s = s5
+a2 = t1
+a3 = t2
+a4 = t5
+a5 = s4
+a6 = s1
+a7 = t0
+a8 = s3
+a9 = s7
+s3 = call s6( a8 a9)
+t4 = twenty
+t5 = d
+s5 = s
+s7 = i
+s8 = two
+t0 = g
+t2 = c
+s2 = s7 + s3
+goto L29
+L27:
+t3 = 1
+t1 = t0 + t3
+s2 = s8 * t1
+L29:
+s4 = 5
+s1 = s2 - s4
+t1 = t0 + s1
+s6 = s2 - t1
+s3 = s6 + s1
+print( s3)
+s7 = s2 + t1
+t2 = t2 + t5
+t3 = t5 + t4
+s8 = s7 + t3
+s5 = t5 < s8
+L3:
+if0 s5 goto L12
+s1 = t5 + t3
+s2 = 30
+s6 = s1 + s2
+s6 = s7 - s6
+s8 = s1 - s6
+s4 = 0
+s5 = s8 * s4
+t3 = t2 + t0
+s8 = s1 + s8
+s3 = t3 - s8
+print( s3)
+goto L3
+L12:
+t0 = t1 - s8
+t0 = s1 + t0
+g = t0
+return g
+func func_g( x7 x8)
+t0 = x8
+t1 = x7
+t2 = a2 + a3
+t3 = a4 + a5
+t4 = a6 + a7
+t5 = t1 + t0
+s1 = 10
+s2 = s1
+s3 = t0 < a2
+if0 s3 goto L42
+s4 = @func_g
+a3_stacksave = a3
+a6_stacksave = a6
+a = t2
+b = t3
+c = t4
+d = t5
+e = s2
+a2 = s3
+a3 = t1
+a4 = s3
+a5 = a6_stacksave
+a6 = s1
+a7 = s3
+s11 = a3_stacksave
+a8 = s11
+a9 = s1
+t2 = call s4( a8 a9)
+t4 = c
+t5 = d
+t3 = b
+s2 = e
+L42:
+s2 = t5 - t2
+s5 = t3 * s2
+s6 = t4 - s5
+s7 = t5 + s2
+s8 = s2 + s5
+t0 = s6 + s7
+j = t0
+return j

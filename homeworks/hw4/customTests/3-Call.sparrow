@@ -1,0 +1,24 @@
+func Mainmain()
+v0 = 4
+v1 = alloc(v0)
+v2 = 4
+vmt_A = alloc(v2)
+v3 = @Arun
+[vmt_A + 0 ] = v3
+[v1 + 0] = vmt_A
+if0 v1 goto v1Error
+goto v1End
+v1Error:
+error("null pointer")
+v1End:
+v4 = [v1 + 0]
+v4 = [v4 + 0]
+v5 = call v4(v1)
+print(v5)
+trivial = 0
+return trivial
+func Arun(this)
+v6 = 42
+print(v6)
+v7 = 99
+return v7

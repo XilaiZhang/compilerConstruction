@@ -1,0 +1,792 @@
+func TreeVisitormain()
+v0 = 4
+v1 = alloc(v0)
+v2 = 4
+vmt_TV = alloc(v2)
+v3 = @TVStart
+[vmt_TV + 0 ] = v3
+[v1 + 0] = vmt_TV
+if0 v1 goto v1Error
+goto v1End
+v1Error:
+error("null pointer")
+v1End:
+v4 = [v1 + 0]
+v4 = [v4 + 0]
+v5 = call v4(v1)
+print(v5)
+trivial = 0
+return trivial
+func TVStart(this)
+v6 = 28
+v7 = alloc(v6)
+v8 = 84
+vmt_Tree = alloc(v8)
+v9 = @TreeDelete
+[vmt_Tree + 52 ] = v9
+v10 = @TreeSetHas_Left
+[vmt_Tree + 36 ] = v10
+v11 = @TreeRemoveLeft
+[vmt_Tree + 64 ] = v11
+v12 = @TreeGetKey
+[vmt_Tree + 20 ] = v12
+v13 = @TreeSetRight
+[vmt_Tree + 4 ] = v13
+v14 = @TreeGetLeft
+[vmt_Tree + 16 ] = v14
+v15 = @TreeGetRight
+[vmt_Tree + 12 ] = v15
+v16 = @TreeRemove
+[vmt_Tree + 56 ] = v16
+v17 = @TreeSetLeft
+[vmt_Tree + 8 ] = v17
+v18 = @TreeInsert
+[vmt_Tree + 48 ] = v18
+v19 = @Treeaccept
+[vmt_Tree + 80 ] = v19
+v20 = @TreePrint
+[vmt_Tree + 72 ] = v20
+v21 = @TreeInit
+[vmt_Tree + 0 ] = v21
+v22 = @TreeGetHas_Right
+[vmt_Tree + 28 ] = v22
+v23 = @TreeGetHas_Left
+[vmt_Tree + 32 ] = v23
+v24 = @TreeRemoveRight
+[vmt_Tree + 60 ] = v24
+v25 = @TreeSearch
+[vmt_Tree + 68 ] = v25
+v26 = @TreeSetKey
+[vmt_Tree + 24 ] = v26
+v27 = @TreeCompare
+[vmt_Tree + 44 ] = v27
+v28 = @TreeSetHas_Right
+[vmt_Tree + 40 ] = v28
+v29 = @TreeRecPrint
+[vmt_Tree + 76 ] = v29
+[v7 + 0] = vmt_Tree
+if0 v7 goto v7Error
+goto v7End
+v7Error:
+error("null pointer")
+v7End:
+root = v7
+v30 = [root + 0]
+v30 = [v30 + 0]
+v32 = 16
+v31 = call v30(root v32)
+ntb = v31
+v33 = [root + 0]
+v33 = [v33 + 72]
+v34 = call v33(root)
+ntb = v34
+v35 = 100000000
+print(v35)
+v36 = [root + 0]
+v36 = [v36 + 48]
+v38 = 8
+v37 = call v36(root v38)
+ntb = v37
+v39 = [root + 0]
+v39 = [v39 + 48]
+v41 = 24
+v40 = call v39(root v41)
+ntb = v40
+v42 = [root + 0]
+v42 = [v42 + 48]
+v44 = 4
+v43 = call v42(root v44)
+ntb = v43
+v45 = [root + 0]
+v45 = [v45 + 48]
+v47 = 12
+v46 = call v45(root v47)
+ntb = v46
+v48 = [root + 0]
+v48 = [v48 + 48]
+v50 = 20
+v49 = call v48(root v50)
+ntb = v49
+v51 = [root + 0]
+v51 = [v51 + 48]
+v53 = 28
+v52 = call v51(root v53)
+ntb = v52
+v54 = [root + 0]
+v54 = [v54 + 48]
+v56 = 14
+v55 = call v54(root v56)
+ntb = v55
+v57 = [root + 0]
+v57 = [v57 + 72]
+v58 = call v57(root)
+ntb = v58
+v59 = 100000000
+print(v59)
+v60 = 12
+v61 = alloc(v60)
+v62 = 4
+vmt_MyVisitor = alloc(v62)
+v63 = @MyVisitorvisit
+[vmt_MyVisitor + 0 ] = v63
+[v61 + 0] = vmt_MyVisitor
+if0 v61 goto v61Error
+goto v61End
+v61Error:
+error("null pointer")
+v61End:
+v = v61
+v64 = 50000000
+print(v64)
+v65 = [root + 0]
+v65 = [v65 + 80]
+v66 = call v65(root v)
+nti = v66
+v67 = 100000000
+print(v67)
+v68 = [root + 0]
+v68 = [v68 + 68]
+v70 = 24
+v69 = call v68(root v70)
+print(v69)
+v71 = [root + 0]
+v71 = [v71 + 68]
+v73 = 12
+v72 = call v71(root v73)
+print(v72)
+v74 = [root + 0]
+v74 = [v74 + 68]
+v76 = 16
+v75 = call v74(root v76)
+print(v75)
+v77 = [root + 0]
+v77 = [v77 + 68]
+v79 = 50
+v78 = call v77(root v79)
+print(v78)
+v80 = [root + 0]
+v80 = [v80 + 68]
+v82 = 12
+v81 = call v80(root v82)
+print(v81)
+v83 = [root + 0]
+v83 = [v83 + 52]
+v85 = 12
+v84 = call v83(root v85)
+ntb = v84
+v86 = [root + 0]
+v86 = [v86 + 72]
+v87 = call v86(root)
+ntb = v87
+v88 = [root + 0]
+v88 = [v88 + 68]
+v90 = 12
+v89 = call v88(root v90)
+print(v89)
+v91 = 0
+return v91
+func TreeInit(this v_key)
+[this + 12] = v_key
+v94 = 0
+[this + 16] = v94
+v96 = 0
+[this + 20] = v96
+v97 = 1
+return v97
+func TreeSetRight(this rn)
+[this + 8] = rn
+v99 = 1
+return v99
+func TreeSetLeft(this ln)
+[this + 4] = ln
+v101 = 1
+return v101
+func TreeGetRight(this)
+v102 = [this + 8]
+return v102
+func TreeGetLeft(this)
+v103 = [this + 4]
+return v103
+func TreeGetKey(this)
+v104 = [this + 12]
+return v104
+func TreeSetKey(this v_key)
+[this + 12] = v_key
+v106 = 1
+return v106
+func TreeGetHas_Right(this)
+v107 = [this + 20]
+return v107
+func TreeGetHas_Left(this)
+v108 = [this + 16]
+return v108
+func TreeSetHas_Left(this val)
+[this + 16] = val
+v110 = 1
+return v110
+func TreeSetHas_Right(this val)
+[this + 20] = val
+v112 = 1
+return v112
+func TreeCompare(this num1 num2)
+v113 = 0
+ntb = v113
+v114 = 1
+v115 = num2 + v114
+nti = v115
+v116 = num1 < num2
+if0 v116 goto v116_else
+v117 = 0
+ntb = v117
+goto v116_end
+v116_else:
+v118 = num1 < nti
+v119 = 1
+v120 = v119 - v118
+if0 v120 goto v120_else
+v121 = 0
+ntb = v121
+goto v120_end
+v120_else:
+v122 = 1
+ntb = v122
+v120_end:
+v116_end:
+return ntb
+func TreeInsert(this v_key)
+v123 = 28
+v124 = alloc(v123)
+v125 = 84
+vmt_Tree = alloc(v125)
+v126 = @TreeDelete
+[vmt_Tree + 52 ] = v126
+v127 = @TreeSetHas_Left
+[vmt_Tree + 36 ] = v127
+v128 = @TreeRemoveLeft
+[vmt_Tree + 64 ] = v128
+v129 = @TreeGetKey
+[vmt_Tree + 20 ] = v129
+v130 = @TreeSetRight
+[vmt_Tree + 4 ] = v130
+v131 = @TreeGetLeft
+[vmt_Tree + 16 ] = v131
+v132 = @TreeGetRight
+[vmt_Tree + 12 ] = v132
+v133 = @TreeRemove
+[vmt_Tree + 56 ] = v133
+v134 = @TreeSetLeft
+[vmt_Tree + 8 ] = v134
+v135 = @TreeInsert
+[vmt_Tree + 48 ] = v135
+v136 = @Treeaccept
+[vmt_Tree + 80 ] = v136
+v137 = @TreePrint
+[vmt_Tree + 72 ] = v137
+v138 = @TreeInit
+[vmt_Tree + 0 ] = v138
+v139 = @TreeGetHas_Right
+[vmt_Tree + 28 ] = v139
+v140 = @TreeGetHas_Left
+[vmt_Tree + 32 ] = v140
+v141 = @TreeRemoveRight
+[vmt_Tree + 60 ] = v141
+v142 = @TreeSearch
+[vmt_Tree + 68 ] = v142
+v143 = @TreeSetKey
+[vmt_Tree + 24 ] = v143
+v144 = @TreeCompare
+[vmt_Tree + 44 ] = v144
+v145 = @TreeSetHas_Right
+[vmt_Tree + 40 ] = v145
+v146 = @TreeRecPrint
+[vmt_Tree + 76 ] = v146
+[v124 + 0] = vmt_Tree
+if0 v124 goto v124Error
+goto v124End
+v124Error:
+error("null pointer")
+v124End:
+new_node = v124
+v147 = [new_node + 0]
+v147 = [v147 + 0]
+v148 = call v147(new_node v_key)
+ntb = v148
+current_node = this
+v149 = 1
+cont = v149
+loopv150:
+if0 cont goto v150_end
+v151 = [current_node + 0]
+v151 = [v151 + 20]
+v152 = call v151(current_node)
+key_aux = v152
+v153 = v_key < key_aux
+if0 v153 goto v153_else
+v154 = [current_node + 0]
+v154 = [v154 + 32]
+v155 = call v154(current_node)
+if0 v155 goto v155_else
+v156 = [current_node + 0]
+v156 = [v156 + 16]
+v157 = call v156(current_node)
+current_node = v157
+goto v155_end
+v155_else:
+v158 = 0
+cont = v158
+v159 = [current_node + 0]
+v159 = [v159 + 36]
+v161 = 1
+v160 = call v159(current_node v161)
+ntb = v160
+v162 = [current_node + 0]
+v162 = [v162 + 8]
+v163 = call v162(current_node new_node)
+ntb = v163
+v155_end:
+goto v153_end
+v153_else:
+v164 = [current_node + 0]
+v164 = [v164 + 28]
+v165 = call v164(current_node)
+if0 v165 goto v165_else
+v166 = [current_node + 0]
+v166 = [v166 + 12]
+v167 = call v166(current_node)
+current_node = v167
+goto v165_end
+v165_else:
+v168 = 0
+cont = v168
+v169 = [current_node + 0]
+v169 = [v169 + 40]
+v171 = 1
+v170 = call v169(current_node v171)
+ntb = v170
+v172 = [current_node + 0]
+v172 = [v172 + 4]
+v173 = call v172(current_node new_node)
+ntb = v173
+v165_end:
+v153_end:
+goto loopv150
+v150_end:
+v174 = 1
+return v174
+func TreeDelete(this v_key)
+current_node = this
+parent_node = this
+v175 = 1
+cont = v175
+v176 = 0
+found = v176
+v177 = 1
+is_root = v177
+loopv178:
+if0 cont goto v178_end
+v179 = [current_node + 0]
+v179 = [v179 + 20]
+v180 = call v179(current_node)
+key_aux = v180
+v181 = v_key < key_aux
+if0 v181 goto v181_else
+v182 = [current_node + 0]
+v182 = [v182 + 32]
+v183 = call v182(current_node)
+if0 v183 goto v183_else
+parent_node = current_node
+v184 = [current_node + 0]
+v184 = [v184 + 16]
+v185 = call v184(current_node)
+current_node = v185
+goto v183_end
+v183_else:
+v186 = 0
+cont = v186
+v183_end:
+goto v181_end
+v181_else:
+v187 = key_aux < v_key
+if0 v187 goto v187_else
+v188 = [current_node + 0]
+v188 = [v188 + 28]
+v189 = call v188(current_node)
+if0 v189 goto v189_else
+parent_node = current_node
+v190 = [current_node + 0]
+v190 = [v190 + 12]
+v191 = call v190(current_node)
+current_node = v191
+goto v189_end
+v189_else:
+v192 = 0
+cont = v192
+v189_end:
+goto v187_end
+v187_else:
+if0 is_root goto is_root_else
+v193 = [current_node + 0]
+v193 = [v193 + 28]
+v194 = call v193(current_node)
+v195 = 1
+v196 = v195 - v194
+v197 = [current_node + 0]
+v197 = [v197 + 32]
+v198 = call v197(current_node)
+v199 = 1
+v200 = v199 - v198
+v201 = v196 * v200
+if0 v201 goto v201_else
+v202 = 1
+ntb = v202
+goto v201_end
+v201_else:
+v203 = [this + 0]
+v203 = [v203 + 56]
+v204 = call v203(this parent_node current_node)
+ntb = v204
+v201_end:
+goto is_root_end
+is_root_else:
+v205 = [this + 0]
+v205 = [v205 + 56]
+v206 = call v205(this parent_node current_node)
+ntb = v206
+is_root_end:
+v207 = 1
+found = v207
+v208 = 0
+cont = v208
+v187_end:
+v181_end:
+v209 = 0
+is_root = v209
+goto loopv178
+v178_end:
+return found
+func TreeRemove(this p_node c_node)
+v210 = [c_node + 0]
+v210 = [v210 + 32]
+v211 = call v210(c_node)
+if0 v211 goto v211_else
+v212 = [this + 0]
+v212 = [v212 + 64]
+v213 = call v212(this p_node c_node)
+ntb = v213
+goto v211_end
+v211_else:
+v214 = [c_node + 0]
+v214 = [v214 + 28]
+v215 = call v214(c_node)
+if0 v215 goto v215_else
+v216 = [this + 0]
+v216 = [v216 + 60]
+v217 = call v216(this p_node c_node)
+ntb = v217
+goto v215_end
+v215_else:
+v218 = [c_node + 0]
+v218 = [v218 + 20]
+v219 = call v218(c_node)
+auxkey1 = v219
+v220 = [p_node + 0]
+v220 = [v220 + 16]
+v221 = call v220(p_node)
+v222 = [v221 + 0]
+v222 = [v222 + 20]
+v223 = call v222(v221)
+auxkey2 = v223
+v224 = [this + 0]
+v224 = [v224 + 44]
+v225 = call v224(this auxkey1 auxkey2)
+if0 v225 goto v225_else
+v226 = [p_node + 0]
+v226 = [v226 + 8]
+v228 = [this + 24]
+v227 = call v226(p_node v228)
+ntb = v227
+v229 = [p_node + 0]
+v229 = [v229 + 36]
+v231 = 0
+v230 = call v229(p_node v231)
+ntb = v230
+goto v225_end
+v225_else:
+v232 = [p_node + 0]
+v232 = [v232 + 4]
+v234 = [this + 24]
+v233 = call v232(p_node v234)
+ntb = v233
+v235 = [p_node + 0]
+v235 = [v235 + 40]
+v237 = 0
+v236 = call v235(p_node v237)
+ntb = v236
+v225_end:
+v215_end:
+v211_end:
+v238 = 1
+return v238
+func TreeRemoveRight(this p_node c_node)
+loopv239:
+v240 = [c_node + 0]
+v240 = [v240 + 28]
+v241 = call v240(c_node)
+if0 v241 goto v239_end
+v242 = [c_node + 0]
+v242 = [v242 + 24]
+v244 = [c_node + 0]
+v244 = [v244 + 12]
+v245 = call v244(c_node)
+v246 = [v245 + 0]
+v246 = [v246 + 20]
+v247 = call v246(v245)
+v243 = call v242(c_node v247)
+ntb = v243
+p_node = c_node
+v248 = [c_node + 0]
+v248 = [v248 + 12]
+v249 = call v248(c_node)
+c_node = v249
+goto loopv239
+v239_end:
+v250 = [p_node + 0]
+v250 = [v250 + 4]
+v252 = [this + 24]
+v251 = call v250(p_node v252)
+ntb = v251
+v253 = [p_node + 0]
+v253 = [v253 + 40]
+v255 = 0
+v254 = call v253(p_node v255)
+ntb = v254
+v256 = 1
+return v256
+func TreeRemoveLeft(this p_node c_node)
+loopv257:
+v258 = [c_node + 0]
+v258 = [v258 + 32]
+v259 = call v258(c_node)
+if0 v259 goto v257_end
+v260 = [c_node + 0]
+v260 = [v260 + 24]
+v262 = [c_node + 0]
+v262 = [v262 + 16]
+v263 = call v262(c_node)
+v264 = [v263 + 0]
+v264 = [v264 + 20]
+v265 = call v264(v263)
+v261 = call v260(c_node v265)
+ntb = v261
+p_node = c_node
+v266 = [c_node + 0]
+v266 = [v266 + 16]
+v267 = call v266(c_node)
+c_node = v267
+goto loopv257
+v257_end:
+v268 = [p_node + 0]
+v268 = [v268 + 8]
+v270 = [this + 24]
+v269 = call v268(p_node v270)
+ntb = v269
+v271 = [p_node + 0]
+v271 = [v271 + 36]
+v273 = 0
+v272 = call v271(p_node v273)
+ntb = v272
+v274 = 1
+return v274
+func TreeSearch(this v_key)
+current_node = this
+v275 = 1
+cont = v275
+v276 = 0
+ifound = v276
+loopv277:
+if0 cont goto v277_end
+v278 = [current_node + 0]
+v278 = [v278 + 20]
+v279 = call v278(current_node)
+key_aux = v279
+v280 = v_key < key_aux
+if0 v280 goto v280_else
+v281 = [current_node + 0]
+v281 = [v281 + 32]
+v282 = call v281(current_node)
+if0 v282 goto v282_else
+v283 = [current_node + 0]
+v283 = [v283 + 16]
+v284 = call v283(current_node)
+current_node = v284
+goto v282_end
+v282_else:
+v285 = 0
+cont = v285
+v282_end:
+goto v280_end
+v280_else:
+v286 = key_aux < v_key
+if0 v286 goto v286_else
+v287 = [current_node + 0]
+v287 = [v287 + 28]
+v288 = call v287(current_node)
+if0 v288 goto v288_else
+v289 = [current_node + 0]
+v289 = [v289 + 12]
+v290 = call v289(current_node)
+current_node = v290
+goto v288_end
+v288_else:
+v291 = 0
+cont = v291
+v288_end:
+goto v286_end
+v286_else:
+v292 = 1
+ifound = v292
+v293 = 0
+cont = v293
+v286_end:
+v280_end:
+goto loopv277
+v277_end:
+return ifound
+func TreePrint(this)
+current_node = this
+v294 = [this + 0]
+v294 = [v294 + 76]
+v295 = call v294(this current_node)
+ntb = v295
+v296 = 1
+return v296
+func TreeRecPrint(this node)
+v297 = [node + 0]
+v297 = [v297 + 32]
+v298 = call v297(node)
+if0 v298 goto v298_else
+v299 = [this + 0]
+v299 = [v299 + 76]
+v301 = [node + 0]
+v301 = [v301 + 16]
+v302 = call v301(node)
+v300 = call v299(this v302)
+ntb = v300
+goto v298_end
+v298_else:
+v303 = 1
+ntb = v303
+v298_end:
+v304 = [node + 0]
+v304 = [v304 + 20]
+v305 = call v304(node)
+print(v305)
+v306 = [node + 0]
+v306 = [v306 + 28]
+v307 = call v306(node)
+if0 v307 goto v307_else
+v308 = [this + 0]
+v308 = [v308 + 76]
+v310 = [node + 0]
+v310 = [v310 + 12]
+v311 = call v310(node)
+v309 = call v308(this v311)
+ntb = v309
+goto v307_end
+v307_else:
+v312 = 1
+ntb = v312
+v307_end:
+v313 = 1
+return v313
+func Treeaccept(this v)
+v314 = 333
+print(v314)
+v315 = [v + 0]
+v315 = [v315 + 0]
+v316 = call v315(v this)
+nti = v316
+v317 = 0
+return v317
+func Visitorvisit(this n)
+v318 = [n + 0]
+v318 = [v318 + 28]
+v319 = call v318(n)
+if0 v319 goto v319_else
+v321 = [n + 0]
+v321 = [v321 + 12]
+v322 = call v321(n)
+[this + 8] = v322
+v323 = [this + 8]
+v324 = [v323 + 0]
+v324 = [v324 + 80]
+v325 = call v324(v323 this)
+nti = v325
+goto v319_end
+v319_else:
+v326 = 0
+nti = v326
+v319_end:
+v327 = [n + 0]
+v327 = [v327 + 32]
+v328 = call v327(n)
+if0 v328 goto v328_else
+v330 = [n + 0]
+v330 = [v330 + 16]
+v331 = call v330(n)
+[this + 4] = v331
+v332 = [this + 4]
+v333 = [v332 + 0]
+v333 = [v333 + 80]
+v334 = call v333(v332 this)
+nti = v334
+goto v328_end
+v328_else:
+v335 = 0
+nti = v335
+v328_end:
+v336 = 0
+return v336
+func MyVisitorvisit(this n)
+v337 = [n + 0]
+v337 = [v337 + 28]
+v338 = call v337(n)
+if0 v338 goto v338_else
+v340 = [n + 0]
+v340 = [v340 + 12]
+v341 = call v340(n)
+[this + 4] = v341
+v342 = [this + 4]
+v343 = [v342 + 0]
+v343 = [v343 + 80]
+v344 = call v343(v342 this)
+nti = v344
+goto v338_end
+v338_else:
+v345 = 0
+nti = v345
+v338_end:
+v346 = [n + 0]
+v346 = [v346 + 20]
+v347 = call v346(n)
+print(v347)
+v348 = [n + 0]
+v348 = [v348 + 32]
+v349 = call v348(n)
+if0 v349 goto v349_else
+v351 = [n + 0]
+v351 = [v351 + 16]
+v352 = call v351(n)
+[this + 8] = v352
+v353 = [this + 8]
+v354 = [v353 + 0]
+v354 = [v354 + 80]
+v355 = call v354(v353 this)
+nti = v355
+goto v349_end
+v349_else:
+v356 = 0
+nti = v356
+v349_end:
+v357 = 0
+return v357

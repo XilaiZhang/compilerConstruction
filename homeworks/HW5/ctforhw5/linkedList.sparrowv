@@ -1,0 +1,1427 @@
+func LinkedListmain()
+t0 = 4
+t1 = alloc( t0 )
+t2 = 4
+t3 = alloc( t2 )
+t4 = @LLStart
+[t3 + 0] = t4
+[t1 + 0] = t3
+if0 t1 goto v1Error
+goto v1End
+v1Error:
+error("null pointer")
+v1End:
+t5 = [t1 + 0]
+t5 = [t5 + 0]
+v5 = s1
+a2 = t1
+s1 = call t5()
+print( s1)
+s2 = 0
+trivial = s2
+return trivial
+func ElementInit()
+[a2 + 4] = a3
+[a2 + 8] = a4
+[a2 + 12] = a5
+t0 = 1
+v9 = t0
+return v9
+func ElementGetAge()
+t0 = [a2 + 4]
+v10 = t0
+return v10
+func ElementGetSalary()
+t0 = [a2 + 8]
+v11 = t0
+return v11
+func ElementGetMarried()
+t0 = [a2 + 12]
+v12 = t0
+return v12
+func ElementEqual()
+t0 = 1
+t1 = t0
+t2 = [a3 + 0]
+t2 = [t2 + 4]
+a3_stacksave = a3
+a2_stacksave = a2
+v15 = t3
+ret_val = t1
+a2 = a3_stacksave
+t3 = call t2()
+a3 = a3_stacksave
+a2 = a2_stacksave
+t1 = ret_val
+t4 = t3
+t5 = [a2 + 0]
+t5 = [t5 + 20]
+s1 = [a2 + 4]
+a3_stacksave = a3
+a2_stacksave = a2
+v17 = s2
+ret_val = t1
+a2 = a2_stacksave
+a3 = t4
+a4 = s1
+s2 = call t5()
+a3 = a3_stacksave
+a2 = a2_stacksave
+t1 = ret_val
+s3 = 1
+s4 = s3 - s2
+if0 s4 goto v20_else
+s5 = 0
+t1 = s5
+goto v20_end
+v20_else:
+s6 = [a3 + 0]
+s6 = [s6 + 8]
+a3_stacksave = a3
+a2_stacksave = a2
+ret_val = t1
+v23 = s7
+a2 = a3_stacksave
+s7 = call s6()
+a3 = a3_stacksave
+a2 = a2_stacksave
+t1 = ret_val
+s8 = s7
+t0 = [a2 + 0]
+t0 = [t0 + 20]
+t2 = [a2 + 8]
+a3_stacksave = a3
+a2_stacksave = a2
+ret_val = t1
+v25 = t3
+a2 = a2_stacksave
+a3 = s8
+a4 = t2
+t3 = call t0()
+a3 = a3_stacksave
+a2 = a2_stacksave
+t1 = ret_val
+t4 = 1
+t5 = t4 - t3
+if0 t5 goto v28_else
+s1 = 0
+t1 = s1
+goto v28_end
+v28_else:
+s2 = [a2 + 12]
+if0 s2 goto v30_else
+s3 = [a3 + 0]
+s3 = [s3 + 12]
+a3_stacksave = a3
+v32 = s4
+ret_val = t1
+a2 = a3_stacksave
+s4 = call s3()
+a3 = a3_stacksave
+t1 = ret_val
+s5 = 1
+s6 = s5 - s4
+if0 s6 goto v34_else
+s7 = 0
+t1 = s7
+goto v34_end
+v34_else:
+s8 = 0
+t0 = s8
+v34_end:
+goto v30_end
+v30_else:
+t2 = [a3 + 0]
+t2 = [t2 + 12]
+a3_stacksave = a3
+nt = t0
+v38 = t3
+ret_val = t1
+a2 = a3_stacksave
+t3 = call t2()
+t0 = nt
+t1 = ret_val
+if0 t3 goto v38_else
+t4 = 0
+t1 = t4
+goto v38_end
+v38_else:
+t5 = 0
+t0 = t5
+v38_end:
+v30_end:
+v28_end:
+v20_end:
+ret_val = t1
+return ret_val
+func ElementCompare()
+t0 = 0
+t1 = t0
+t2 = 1
+t3 = a4 + t2
+t4 = t3
+t5 = a3 < a4
+if0 t5 goto v44_else
+s1 = 0
+t1 = s1
+goto v44_end
+v44_else:
+s2 = a3 < t4
+s3 = 1
+s4 = s3 - s2
+if0 s4 goto v48_else
+s5 = 0
+t1 = s5
+goto v48_end
+v48_else:
+s6 = 1
+t1 = s6
+v48_end:
+v44_end:
+retval = t1
+return retval
+func ListInit()
+t0 = 1
+[a2 + 12] = t0
+t1 = 1
+v53 = t1
+return v53
+func ListInitNew()
+[a2 + 12] = a5
+[a2 + 4] = a3
+[a2 + 8] = a4
+t0 = 1
+v57 = t0
+return v57
+func ListInsert()
+t0 = a2
+t1 = 16
+t2 = alloc( t1 )
+t3 = 40
+t4 = alloc( t3 )
+t5 = @ListDelete
+[t4 + 16] = t5
+s1 = @ListPrint
+[t4 + 36] = s1
+s2 = @ListInit
+[t4 + 0] = s2
+s3 = @ListGetElem
+[t4 + 28] = s3
+s4 = @ListGetNext
+[t4 + 32] = s4
+s5 = @ListSetNext
+[t4 + 12] = s5
+s6 = @ListSearch
+[t4 + 20] = s6
+s7 = @ListGetEnd
+[t4 + 24] = s7
+s8 = @ListInitNew
+[t4 + 4] = s8
+t1 = @ListInsert
+[t4 + 8] = t1
+[t2 + 0] = t4
+if0 t2 goto v59Error
+goto v59End
+v59Error:
+error("null pointer")
+v59End:
+t3 = t2
+t5 = [t3 + 0]
+t5 = [t5 + 4]
+s1 = 0
+a3_stacksave = a3
+v72 = s2
+a2 = t3
+a3 = a3_stacksave
+a4 = t0
+a5 = s1
+s2 = call t5()
+s3 = s2
+aux02 = t3
+return aux02
+func ListSetNext()
+[a2 + 8] = a3
+t0 = 1
+v75 = t0
+return v75
+func ListDelete()
+t0 = a2
+t1 = 0
+t2 = t1
+t3 = 0
+t4 = 1
+t5 = t3 - t4
+s1 = t5
+s2 = a2
+s3 = a2
+s4 = [a2 + 12]
+s5 = s4
+s6 = [a2 + 4]
+s7 = s6
+loopv82:
+ s9 = 1
+v83 = s9
+s9 = v83
+ s11 = s9 - s5
+v84 = s11
+ s9 = 1
+v85 = s9
+s9 = v85
+ s11 = s9 - t2
+v86 = s11
+s9 = v84
+s10 = v86
+ s11 = s9 * s10
+v87 = s11
+s9 = v87
+if0 s9 goto v82_end
+ s10 = [a3 + 0]
+v88 = s10
+s9 = v88
+ s10 = [s9 + 16]
+v88 = s10
+a3_stacksave = a3
+aux05 = s8
+aux04 = s1
+nt = t1
+prev = s3
+aux01 = s2
+v103 = t4
+v104 = t3
+v101 = t5
+v102 = s4
+v90 = s6
+ret_val = t2
+var_end = s5
+var_elem = s7
+my_head = t0
+a2 = a3_stacksave
+a3 = s7
+s9 = v88
+s10 = call s9()
+v89 = s10
+a3 = a3_stacksave
+s3 = prev
+t4 = v103
+t5 = v101
+s4 = v102
+s5 = var_end
+s6 = v90
+s7 = var_elem
+s8 = aux05
+t0 = my_head
+t1 = nt
+s1 = aux04
+t2 = ret_val
+s2 = aux01
+t3 = v104
+s9 = v89
+if0 s9 goto v89_else
+s6 = 1
+t2 = s6
+ s9 = 0
+v91 = s9
+s10 = v91
+ s11 = s1 < s10
+v92 = s11
+s9 = v92
+if0 s9 goto v92_else
+ s10 = [s2 + 0]
+v93 = s10
+s9 = v93
+ s10 = [s9 + 32]
+v93 = s10
+a3_stacksave = a3
+aux05 = s8
+aux04 = s1
+nt = t1
+prev = s3
+aux01 = s2
+v103 = t4
+v104 = t3
+v101 = t5
+v102 = s4
+v90 = s6
+ret_val = t2
+var_end = s5
+var_elem = s7
+my_head = t0
+a2 = s2
+s9 = v93
+s10 = call s9()
+v94 = s10
+a3 = a3_stacksave
+s3 = prev
+t4 = v103
+t5 = v101
+s4 = v102
+s5 = var_end
+s6 = v90
+s7 = var_elem
+s8 = aux05
+t0 = my_head
+t1 = nt
+s1 = aux04
+t2 = ret_val
+s2 = aux01
+t3 = v104
+t0 = v94
+goto v92_end
+v92_else:
+ s9 = 0
+v95 = s9
+ s9 = 555
+v96 = s9
+s9 = v95
+s10 = v96
+ s11 = s9 - s10
+v97 = s11
+s9 = v97
+print( s9 )
+ s10 = [s3 + 0]
+v98 = s10
+s9 = v98
+ s10 = [s9 + 12]
+v98 = s10
+ s10 = [s2 + 0]
+v100 = s10
+s9 = v100
+ s10 = [s9 + 32]
+v100 = s10
+a3_stacksave = a3
+aux05 = s8
+aux04 = s1
+nt = t1
+prev = s3
+aux01 = s2
+v103 = t4
+v104 = t3
+v101 = t5
+v102 = s4
+v90 = s6
+ret_val = t2
+var_end = s5
+var_elem = s7
+my_head = t0
+a2 = s2
+s9 = v100
+t5 = call s9()
+a3 = a3_stacksave
+s3 = prev
+t4 = v103
+s4 = v102
+s5 = var_end
+s6 = v90
+s7 = var_elem
+s8 = aux05
+t0 = my_head
+t1 = nt
+s1 = aux04
+t2 = ret_val
+s2 = aux01
+t3 = v104
+a3_stacksave = a3
+aux05 = s8
+aux04 = s1
+nt = t1
+prev = s3
+aux01 = s2
+v103 = t4
+v104 = t3
+v101 = t5
+v102 = s4
+v90 = s6
+ret_val = t2
+var_end = s5
+var_elem = s7
+my_head = t0
+a2 = s3
+a3 = t5
+s9 = v98
+s10 = call s9()
+v99 = s10
+a3 = a3_stacksave
+s3 = prev
+t4 = v103
+t5 = v101
+s4 = v102
+s5 = var_end
+s6 = v90
+s7 = var_elem
+s8 = aux05
+t0 = my_head
+t1 = nt
+s1 = aux04
+t2 = ret_val
+s2 = aux01
+t3 = v104
+s8 = v99
+s4 = 0
+t4 = 555
+t3 = s4 - t4
+print( t3)
+v92_end:
+goto v89_end
+v89_else:
+ s9 = 0
+v105 = s9
+t1 = v105
+v89_end:
+ s9 = 1
+v106 = s9
+s9 = v106
+ s11 = s9 - t2
+v107 = s11
+s9 = v107
+if0 s9 goto v107_else
+s3 = s2
+ s10 = [s2 + 0]
+v108 = s10
+s9 = v108
+ s10 = [s9 + 32]
+v108 = s10
+a3_stacksave = a3
+aux05 = s8
+aux04 = s1
+nt = t1
+prev = s3
+aux01 = s2
+v103 = t4
+v104 = t3
+v101 = t5
+v102 = s4
+v90 = s6
+ret_val = t2
+var_end = s5
+var_elem = s7
+my_head = t0
+a2 = s2
+s9 = v108
+s10 = call s9()
+v109 = s10
+a3 = a3_stacksave
+s3 = prev
+t4 = v103
+t5 = v101
+s4 = v102
+s5 = var_end
+s6 = v90
+s7 = var_elem
+s8 = aux05
+t0 = my_head
+t1 = nt
+s1 = aux04
+t2 = ret_val
+s2 = aux01
+t3 = v104
+s2 = v109
+ s10 = [s2 + 0]
+v110 = s10
+s9 = v110
+ s10 = [s9 + 24]
+v110 = s10
+a3_stacksave = a3
+aux05 = s8
+aux04 = s1
+nt = t1
+prev = s3
+aux01 = s2
+v103 = t4
+v104 = t3
+v101 = t5
+v102 = s4
+v90 = s6
+ret_val = t2
+var_end = s5
+var_elem = s7
+my_head = t0
+a2 = s2
+s9 = v110
+s10 = call s9()
+v111 = s10
+a3 = a3_stacksave
+s3 = prev
+t4 = v103
+t5 = v101
+s4 = v102
+s5 = var_end
+s6 = v90
+s7 = var_elem
+s8 = aux05
+t0 = my_head
+t1 = nt
+s1 = aux04
+t2 = ret_val
+s2 = aux01
+t3 = v104
+s5 = v111
+ s10 = [s2 + 0]
+v112 = s10
+s9 = v112
+ s10 = [s9 + 28]
+v112 = s10
+a3_stacksave = a3
+aux05 = s8
+aux04 = s1
+nt = t1
+prev = s3
+aux01 = s2
+v103 = t4
+v104 = t3
+v101 = t5
+v102 = s4
+v90 = s6
+ret_val = t2
+var_end = s5
+var_elem = s7
+my_head = t0
+a2 = s2
+s9 = v112
+s10 = call s9()
+v113 = s10
+a3 = a3_stacksave
+s3 = prev
+t4 = v103
+t5 = v101
+s4 = v102
+s5 = var_end
+s6 = v90
+s7 = var_elem
+s8 = aux05
+t0 = my_head
+t1 = nt
+s1 = aux04
+t2 = ret_val
+s2 = aux01
+t3 = v104
+s7 = v113
+ s9 = 1
+v114 = s9
+s1 = v114
+goto v107_end
+v107_else:
+ s9 = 0
+v115 = s9
+t1 = v115
+v107_end:
+goto loopv82
+v82_end:
+my_head = t0
+return my_head
+func ListSearch()
+t0 = 0
+t1 = t0
+t2 = a2
+t3 = [a2 + 12]
+t4 = t3
+t5 = [a2 + 4]
+s1 = t5
+loopv119:
+t3 = 1
+s7 = t3 - t4
+if0 s7 goto v119_end
+s8 = [a3 + 0]
+s8 = [s8 + 16]
+a3_stacksave = a3
+nt = s2
+aux01 = t2
+v125 = s3
+v126 = s4
+v123 = s5
+v124 = s6
+v121 = s7
+v122 = s8
+int_ret_val = t1
+v130 = t0
+v120 = t3
+v131 = t5
+var_end = t4
+var_elem = s1
+a2 = a3_stacksave
+a3 = s1
+s5 = call s8()
+a3 = a3_stacksave
+s3 = v125
+t4 = var_end
+s4 = v126
+t5 = v131
+s6 = v124
+s7 = v121
+s8 = v122
+t0 = v130
+t1 = int_ret_val
+t2 = aux01
+s1 = var_elem
+s2 = nt
+t3 = v120
+if0 s5 goto v123_else
+s6 = 1
+t1 = s6
+goto v123_end
+v123_else:
+s3 = 0
+s2 = s3
+v123_end:
+s4 = [t2 + 0]
+s4 = [s4 + 32]
+a3_stacksave = a3
+nt = s2
+aux01 = t2
+v125 = s3
+v126 = s4
+v123 = s5
+v124 = s6
+v121 = s7
+v122 = s8
+int_ret_val = t1
+v130 = t0
+v120 = t3
+v131 = t5
+var_end = t4
+var_elem = s1
+a2 = t2
+s10 = call s4()
+v127 = s10
+a3 = a3_stacksave
+s3 = v125
+t4 = var_end
+s4 = v126
+t5 = v131
+s5 = v123
+s6 = v124
+s7 = v121
+s8 = v122
+t0 = v130
+t1 = int_ret_val
+t2 = aux01
+s1 = var_elem
+s2 = nt
+t3 = v120
+t2 = v127
+ s10 = [t2 + 0]
+v128 = s10
+s9 = v128
+ s10 = [s9 + 24]
+v128 = s10
+a3_stacksave = a3
+nt = s2
+aux01 = t2
+v125 = s3
+v126 = s4
+v123 = s5
+v124 = s6
+v121 = s7
+v122 = s8
+int_ret_val = t1
+v130 = t0
+v120 = t3
+v131 = t5
+var_end = t4
+var_elem = s1
+a2 = t2
+s9 = v128
+s10 = call s9()
+v129 = s10
+a3 = a3_stacksave
+s3 = v125
+t4 = var_end
+s4 = v126
+t5 = v131
+s5 = v123
+s6 = v124
+s7 = v121
+s8 = v122
+t0 = v130
+t1 = int_ret_val
+t2 = aux01
+s1 = var_elem
+s2 = nt
+t3 = v120
+t4 = v129
+t0 = [t2 + 0]
+t0 = [t0 + 28]
+a3_stacksave = a3
+nt = s2
+aux01 = t2
+v125 = s3
+v126 = s4
+v123 = s5
+v124 = s6
+v121 = s7
+v122 = s8
+int_ret_val = t1
+v130 = t0
+v120 = t3
+v131 = t5
+var_end = t4
+var_elem = s1
+a2 = t2
+t5 = call t0()
+a3 = a3_stacksave
+s3 = v125
+t4 = var_end
+s4 = v126
+s5 = v123
+s6 = v124
+s7 = v121
+s8 = v122
+t0 = v130
+t1 = int_ret_val
+t2 = aux01
+s1 = var_elem
+s2 = nt
+t3 = v120
+s1 = t5
+goto loopv119
+v119_end:
+int_ret_val = t1
+return int_ret_val
+func ListGetEnd()
+t0 = [a2 + 12]
+v132 = t0
+return v132
+func ListGetElem()
+t0 = [a2 + 4]
+v133 = t0
+return v133
+func ListGetNext()
+t0 = [a2 + 8]
+v134 = t0
+return v134
+func ListPrint()
+t0 = a2
+t1 = [a2 + 12]
+t2 = t1
+t3 = [a2 + 4]
+t4 = t3
+loopv137:
+s8 = 1
+t1 = s8 - t2
+if0 t1 goto v137_end
+t5 = [t4 + 0]
+t5 = [t5 + 4]
+v140 = t5
+aux01 = t0
+v147 = s1
+v145 = s2
+v146 = s3
+v143 = s4
+v144 = s5
+v141 = s6
+v142 = s7
+v138 = s8
+v139 = t1
+var_end = t2
+var_elem = t4
+a2 = t4
+s6 = call t5()
+s3 = v146
+t4 = var_elem
+t5 = v140
+s4 = v143
+s5 = v144
+s7 = v142
+s8 = v138
+t0 = aux01
+t1 = v139
+s1 = v147
+t2 = var_end
+s2 = v145
+print( s6)
+s7 = [t0 + 0]
+s7 = [s7 + 32]
+v140 = t5
+aux01 = t0
+v147 = s1
+v145 = s2
+v146 = s3
+v143 = s4
+v144 = s5
+v141 = s6
+v142 = s7
+v138 = s8
+v139 = t1
+var_end = t2
+var_elem = t4
+a2 = t0
+s4 = call s7()
+s3 = v146
+t4 = var_elem
+t5 = v140
+s5 = v144
+s6 = v141
+s7 = v142
+s8 = v138
+t0 = aux01
+t1 = v139
+s1 = v147
+t2 = var_end
+s2 = v145
+t0 = s4
+s5 = [t0 + 0]
+s5 = [s5 + 24]
+v140 = t5
+aux01 = t0
+v147 = s1
+v145 = s2
+v146 = s3
+v143 = s4
+v144 = s5
+v141 = s6
+v142 = s7
+v138 = s8
+v139 = t1
+var_end = t2
+var_elem = t4
+a2 = t0
+s2 = call s5()
+s3 = v146
+t4 = var_elem
+t5 = v140
+s4 = v143
+s5 = v144
+s6 = v141
+s7 = v142
+s8 = v138
+t0 = aux01
+t1 = v139
+s1 = v147
+t2 = var_end
+t2 = s2
+s3 = [t0 + 0]
+s3 = [s3 + 28]
+v140 = t5
+aux01 = t0
+v147 = s1
+v145 = s2
+v146 = s3
+v143 = s4
+v144 = s5
+v141 = s6
+v142 = s7
+v138 = s8
+v139 = t1
+var_end = t2
+var_elem = t4
+a2 = t0
+s1 = call s3()
+s3 = v146
+t4 = var_elem
+t5 = v140
+s4 = v143
+s5 = v144
+s6 = v141
+s7 = v142
+s8 = v138
+t0 = aux01
+t1 = v139
+t2 = var_end
+s2 = v145
+t4 = s1
+goto loopv137
+v137_end:
+t3 = 1
+v148 = t3
+return v148
+func LLStart()
+t0 = 16
+t1 = alloc( t0 )
+t2 = 40
+t3 = alloc( t2 )
+t4 = @ListDelete
+[t3 + 16] = t4
+t5 = @ListPrint
+[t3 + 36] = t5
+s1 = @ListInit
+[t3 + 0] = s1
+s2 = @ListGetElem
+[t3 + 28] = s2
+s3 = @ListGetNext
+[t3 + 32] = s3
+s4 = @ListSetNext
+[t3 + 12] = s4
+s5 = @ListSearch
+[t3 + 20] = s5
+s6 = @ListGetEnd
+[t3 + 24] = s6
+s7 = @ListInitNew
+[t3 + 4] = s7
+s8 = @ListInsert
+[t3 + 8] = s8
+[t1 + 0] = t3
+if0 t1 goto v150Error
+goto v150End
+v150Error:
+error("null pointer")
+v150End:
+t0 = t1
+t2 = [t0 + 0]
+t2 = [t2 + 0]
+v163 = t4
+last_elem = t0
+a2 = t0
+t4 = call t2()
+t0 = last_elem
+t5 = t4
+s1 = t0
+s2 = [s1 + 0]
+s2 = [s2 + 0]
+aux01 = t5
+v165 = s3
+head = s1
+a2 = s1
+s3 = call s2()
+t5 = aux01
+s1 = head
+t5 = s3
+s4 = [s1 + 0]
+s4 = [s4 + 36]
+aux01 = t5
+v167 = s5
+head = s1
+a2 = s1
+s5 = call s4()
+t5 = aux01
+s1 = head
+t5 = s5
+s6 = 16
+s7 = alloc( s6 )
+s8 = 24
+t3 = alloc( s8 )
+t1 = @ElementGetSalary
+[t3 + 8] = t1
+t2 = @ElementInit
+[t3 + 0] = t2
+t4 = @ElementGetAge
+[t3 + 4] = t4
+t0 = @ElementEqual
+[t3 + 16] = t0
+s2 = @ElementGetMarried
+[t3 + 12] = s2
+s3 = @ElementCompare
+[t3 + 20] = s3
+[s7 + 0] = t3
+if0 s7 goto v169Error
+goto v169End
+v169Error:
+error("null pointer")
+v169End:
+s4 = s7
+s5 = [s4 + 0]
+s5 = [s5 + 0]
+s6 = 25
+s8 = 37000
+t1 = 0
+aux01 = t5
+vmt_Element = t3
+v178 = t2
+el01 = s4
+head = s1
+a2 = s4
+a3 = s6
+a4 = s8
+a5 = t1
+t2 = call s5()
+t5 = aux01
+s4 = el01
+s1 = head
+t3 = vmt_Element
+t5 = t2
+t4 = [s1 + 0]
+t4 = [t4 + 8]
+aux01 = t5
+vmt_Element = t3
+v183 = t0
+el01 = s4
+head = s1
+a2 = s1
+a3 = s4
+t0 = call t4()
+t5 = aux01
+s4 = el01
+s1 = head
+t3 = vmt_Element
+s1 = t0
+s2 = [s1 + 0]
+s2 = [s2 + 36]
+aux01 = t5
+vmt_Element = t3
+v185 = s3
+el01 = s4
+head = s1
+a2 = s1
+s3 = call s2()
+t5 = aux01
+s4 = el01
+s1 = head
+t3 = vmt_Element
+t5 = s3
+s7 = 10000000
+print( s7)
+t1 = 16
+s8 = alloc( t1 )
+s6 = 24
+t3 = alloc( s6 )
+s5 = @ElementGetSalary
+[t3 + 8] = s5
+t2 = @ElementInit
+[t3 + 0] = t2
+t4 = @ElementGetAge
+[t3 + 4] = t4
+t0 = @ElementEqual
+[t3 + 16] = t0
+s2 = @ElementGetMarried
+[t3 + 12] = s2
+s3 = @ElementCompare
+[t3 + 20] = s3
+[s8 + 0] = t3
+if0 s8 goto v188Error
+goto v188End
+v188Error:
+error("null pointer")
+v188End:
+s4 = s8
+s7 = [s4 + 0]
+s7 = [s7 + 0]
+t1 = 39
+s6 = 42000
+s5 = 1
+aux01 = t5
+vmt_Element = t3
+el01 = s4
+head = s1
+v197 = t2
+a2 = s4
+a3 = t1
+a4 = s6
+a5 = s5
+t2 = call s7()
+t5 = aux01
+s4 = el01
+s1 = head
+t3 = vmt_Element
+t5 = t2
+t4 = s4
+t0 = [s1 + 0]
+t0 = [t0 + 8]
+v202 = s2
+aux01 = t5
+vmt_Element = t3
+el02 = t4
+el01 = s4
+head = s1
+a2 = s1
+a3 = s4
+s2 = call t0()
+t4 = el02
+t5 = aux01
+s4 = el01
+s1 = head
+t3 = vmt_Element
+s1 = s2
+s3 = [s1 + 0]
+s3 = [s3 + 36]
+aux01 = t5
+vmt_Element = t3
+v204 = s8
+el02 = t4
+el01 = s4
+head = s1
+a2 = s1
+s8 = call s3()
+t4 = el02
+t5 = aux01
+s4 = el01
+s1 = head
+t3 = vmt_Element
+t5 = s8
+s5 = 10000000
+print( s5)
+t1 = 16
+s6 = alloc( t1 )
+s7 = 24
+t3 = alloc( s7 )
+t2 = @ElementGetSalary
+[t3 + 8] = t2
+t0 = @ElementInit
+[t3 + 0] = t0
+s2 = @ElementGetAge
+[t3 + 4] = s2
+s3 = @ElementEqual
+[t3 + 16] = s3
+s8 = @ElementGetMarried
+[t3 + 12] = s8
+s5 = @ElementCompare
+[t3 + 20] = s5
+[s6 + 0] = t3
+if0 s6 goto v207Error
+goto v207End
+v207Error:
+error("null pointer")
+v207End:
+s4 = s6
+t1 = [s4 + 0]
+t1 = [t1 + 0]
+s7 = 22
+t2 = 34000
+t0 = 0
+aux01 = t5
+vmt_Element = t3
+v216 = s2
+el02 = t4
+el01 = s4
+head = s1
+a2 = s4
+a3 = s7
+a4 = t2
+a5 = t0
+s2 = call t1()
+t4 = el02
+t5 = aux01
+s4 = el01
+s1 = head
+t3 = vmt_Element
+t5 = s2
+s3 = [s1 + 0]
+s3 = [s3 + 8]
+aux01 = t5
+vmt_Element = t3
+v221 = s8
+el02 = t4
+el01 = s4
+head = s1
+a2 = s1
+a3 = s4
+s8 = call s3()
+t4 = el02
+t5 = aux01
+s4 = el01
+s1 = head
+t3 = vmt_Element
+s1 = s8
+s5 = [s1 + 0]
+s5 = [s5 + 36]
+aux01 = t5
+vmt_Element = t3
+v223 = s6
+el02 = t4
+el01 = s4
+head = s1
+a2 = s1
+s6 = call s5()
+t4 = el02
+t5 = aux01
+s4 = el01
+s1 = head
+t3 = vmt_Element
+t5 = s6
+t0 = 16
+s7 = alloc( t0 )
+t2 = 24
+t3 = alloc( t2 )
+t1 = @ElementGetSalary
+[t3 + 8] = t1
+s2 = @ElementInit
+[t3 + 0] = s2
+s3 = @ElementGetAge
+[t3 + 4] = s3
+s8 = @ElementEqual
+[t3 + 16] = s8
+s5 = @ElementGetMarried
+[t3 + 12] = s5
+s6 = @ElementCompare
+[t3 + 20] = s6
+[s7 + 0] = t3
+if0 s7 goto v225Error
+goto v225End
+v225Error:
+error("null pointer")
+v225End:
+t0 = s7
+t2 = [t0 + 0]
+t2 = [t2 + 0]
+t1 = 27
+s2 = 34000
+s3 = 0
+aux01 = t5
+vmt_Element = t3
+el03 = t0
+el02 = t4
+el01 = s4
+head = s1
+v234 = s8
+a2 = t0
+a3 = t1
+a4 = s2
+a5 = s3
+s8 = call t2()
+t4 = el02
+t5 = aux01
+s4 = el01
+t0 = el03
+s1 = head
+t3 = vmt_Element
+t5 = s8
+s5 = [s1 + 0]
+s5 = [s5 + 20]
+aux01 = t5
+vmt_Element = t3
+el03 = t0
+el02 = t4
+el01 = s4
+head = s1
+v239 = s6
+a2 = s1
+a3 = t4
+s6 = call s5()
+t4 = el02
+t5 = aux01
+s4 = el01
+t0 = el03
+s1 = head
+t3 = vmt_Element
+print( s6)
+s7 = [s1 + 0]
+s7 = [s7 + 20]
+aux01 = t5
+vmt_Element = t3
+el02 = t4
+el01 = s4
+v241 = s3
+head = s1
+a2 = s1
+a3 = t0
+s3 = call s7()
+t4 = el02
+t5 = aux01
+s4 = el01
+s1 = head
+t3 = vmt_Element
+print( s3)
+t1 = 10000000
+print( t1)
+s2 = 16
+t2 = alloc( s2 )
+s8 = 24
+t3 = alloc( s8 )
+s5 = @ElementGetSalary
+[t3 + 8] = s5
+s6 = @ElementInit
+[t3 + 0] = s6
+t0 = @ElementGetAge
+[t3 + 4] = t0
+s7 = @ElementEqual
+[t3 + 16] = s7
+s3 = @ElementGetMarried
+[t3 + 12] = s3
+t1 = @ElementCompare
+[t3 + 20] = t1
+[t2 + 0] = t3
+if0 t2 goto v244Error
+goto v244End
+v244Error:
+error("null pointer")
+v244End:
+s4 = t2
+s2 = [s4 + 0]
+s2 = [s2 + 0]
+s8 = 28
+s5 = 35000
+s6 = 0
+v253 = t0
+aux01 = t5
+el02 = t4
+el01 = s4
+head = s1
+a2 = s4
+a3 = s8
+a4 = s5
+a5 = s6
+t0 = call s2()
+t4 = el02
+t5 = aux01
+s4 = el01
+s1 = head
+t5 = t0
+s7 = [s1 + 0]
+s7 = [s7 + 8]
+v258 = s3
+aux01 = t5
+el02 = t4
+el01 = s4
+head = s1
+a2 = s1
+a3 = s4
+s3 = call s7()
+t4 = el02
+t5 = aux01
+s4 = el01
+s1 = head
+s1 = s3
+t1 = [s1 + 0]
+t1 = [t1 + 36]
+v260 = t3
+aux01 = t5
+el02 = t4
+el01 = s4
+head = s1
+a2 = s1
+t3 = call t1()
+t4 = el02
+t5 = aux01
+s4 = el01
+s1 = head
+t5 = t3
+t2 = 2220000
+print( t2)
+s5 = [s1 + 0]
+s5 = [s5 + 16]
+v263 = s6
+aux01 = t5
+el01 = s4
+head = s1
+a2 = s1
+a3 = t4
+s6 = call s5()
+t5 = aux01
+s4 = el01
+s1 = head
+s1 = s6
+s8 = [s1 + 0]
+s8 = [s8 + 36]
+v265 = s2
+aux01 = t5
+el01 = s4
+head = s1
+a2 = s1
+s2 = call s8()
+t5 = aux01
+s4 = el01
+s1 = head
+t5 = s2
+t0 = 33300000
+print( t0)
+s7 = [s1 + 0]
+s7 = [s7 + 16]
+v268 = s3
+aux01 = t5
+head = s1
+a2 = s1
+a3 = s4
+s3 = call s7()
+t5 = aux01
+s1 = head
+s1 = s3
+t1 = [s1 + 0]
+t1 = [t1 + 36]
+aux01 = t5
+v270 = t3
+a2 = s1
+t3 = call t1()
+t5 = aux01
+t5 = t3
+t2 = 44440000
+print( t2)
+s5 = 0
+v272 = s5
+return v272

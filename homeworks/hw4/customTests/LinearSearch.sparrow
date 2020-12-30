@@ -1,0 +1,209 @@
+func LinearSearchmain()
+v0 = 12
+v1 = alloc(v0)
+v2 = 16
+vmt_LS = alloc(v2)
+v3 = @LSPrint
+[vmt_LS + 4 ] = v3
+v4 = @LSInit
+[vmt_LS + 12 ] = v4
+v5 = @LSStart
+[vmt_LS + 0 ] = v5
+v6 = @LSSearch
+[vmt_LS + 8 ] = v6
+[v1 + 0] = vmt_LS
+if0 v1 goto v1Error
+goto v1End
+v1Error:
+error("null pointer")
+v1End:
+v7 = [v1 + 0]
+v7 = [v7 + 0]
+v9 = 10
+v8 = call v7(v1 v9)
+print(v8)
+trivial = 0
+return trivial
+func LSStart(this sz)
+v10 = [this + 0]
+v10 = [v10 + 12]
+v11 = call v10(this sz)
+aux01 = v11
+v12 = [this + 0]
+v12 = [v12 + 4]
+v13 = call v12(this)
+aux02 = v13
+v14 = 9999
+print(v14)
+v15 = [this + 0]
+v15 = [v15 + 8]
+v17 = 8
+v16 = call v15(this v17)
+print(v16)
+v18 = [this + 0]
+v18 = [v18 + 8]
+v20 = 12
+v19 = call v18(this v20)
+print(v19)
+v21 = [this + 0]
+v21 = [v21 + 8]
+v23 = 17
+v22 = call v21(this v23)
+print(v22)
+v24 = [this + 0]
+v24 = [v24 + 8]
+v26 = 50
+v25 = call v24(this v26)
+print(v25)
+v27 = 55
+return v27
+func LSPrint(this)
+v28 = 1
+j = v28
+loopv29:
+v30 = [this + 8]
+v31 = j < v30
+if0 v31 goto v29_end
+v32 = [this + 4]
+v33 = 4
+v34 = 5
+v35 = v33 - v34
+v36 = v35 < j
+v37 = [v32 + 0]
+v38 = j < v37
+v39 = v36 * v38
+if0 v39 goto v36Error
+goto v36End
+v36Error:
+error("array index out of bounds")
+v36End:
+v40 = v33 * j
+v40 = v40 + v33
+v41 = v32 + v40
+v41 = [v41 + 0]
+print(v41)
+v42 = 1
+v43 = j + v42
+j = v43
+goto loopv29
+v29_end:
+v44 = 0
+return v44
+func LSSearch(this num)
+v45 = 1
+j = v45
+v46 = 0
+ls01 = v46
+v47 = 0
+ifound = v47
+loopv48:
+v49 = [this + 8]
+v50 = j < v49
+if0 v50 goto v48_end
+v51 = [this + 4]
+v52 = 4
+v53 = 5
+v54 = v52 - v53
+v55 = v54 < j
+v56 = [v51 + 0]
+v57 = j < v56
+v58 = v55 * v57
+if0 v58 goto v55Error
+goto v55End
+v55Error:
+error("array index out of bounds")
+v55End:
+v59 = v52 * j
+v59 = v59 + v52
+v60 = v51 + v59
+v60 = [v60 + 0]
+aux01 = v60
+v61 = 1
+v62 = num + v61
+aux02 = v62
+v63 = aux01 < num
+if0 v63 goto v63_else
+v64 = 0
+nt = v64
+goto v63_end
+v63_else:
+v65 = aux01 < aux02
+v66 = 1
+v67 = v66 - v65
+if0 v67 goto v67_else
+v68 = 0
+nt = v68
+goto v67_end
+v67_else:
+v69 = 1
+ls01 = v69
+v70 = 1
+ifound = v70
+v71 = [this + 8]
+j = v71
+v67_end:
+v63_end:
+v72 = 1
+v73 = j + v72
+j = v73
+goto loopv48
+v48_end:
+return ifound
+func LSInit(this sz)
+[this + 8] = sz
+v76 = 1
+v77 = 4
+v78 = sz + v76
+v78 = v78 * v77
+v79 = alloc( v78)
+if0 v79 goto v79Error
+goto v79End
+v79Error:
+error("null pointer")
+v79End:
+[v79 + 0] = sz
+[this + 4] = v79
+v80 = 1
+j = v80
+v81 = [this + 8]
+v82 = 1
+v83 = v81 + v82
+k = v83
+loopv84:
+v85 = [this + 8]
+v86 = j < v85
+if0 v86 goto v84_end
+v87 = 2
+v88 = v87 * j
+aux01 = v88
+v89 = 3
+v90 = k - v89
+aux02 = v90
+v91 = aux01 + aux02
+v92 = [this + 4]
+v93 = 4
+v94 = 5
+v95 = v93 - v94
+v96 = v95 < j
+v97 = [v92 + 0]
+v98 = j < v97
+v99 = v96 * v98
+if0 v99 goto v96Error
+goto v96End
+v96Error:
+error("array index out of bounds")
+v96End:
+v100 = v93 * j
+v100 = v100 + v93
+v101 = v92 + v100
+[v101 + 0] = v91
+v102 = 1
+v103 = j + v102
+j = v103
+v104 = 1
+v105 = k - v104
+k = v105
+goto loopv84
+v84_end:
+v106 = 0
+return v106

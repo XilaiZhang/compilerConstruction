@@ -1,0 +1,50 @@
+func Factorialmain()
+t0 = 4
+t1 = alloc( t0 )
+t2 = 4
+t3 = alloc( t2 )
+t4 = @FacComputeFac
+[t3 + 0] = t4
+[t1 + 0] = t3
+if0 t1 goto v1Error
+goto v1End
+v1Error:
+error("null pointer")
+v1End:
+t5 = [t1 + 0]
+t5 = [t5 + 0]
+s1 = 10
+v5 = s2
+a2 = t1
+a3 = s1
+s2 = call t5()
+print( s2)
+s3 = 0
+trivial = s3
+return trivial
+func FacComputeFac()
+t0 = 1
+t1 = a3 < t0
+if0 t1 goto v8_else
+t2 = 1
+t3 = t2
+goto v8_end
+v8_else:
+t4 = [a2 + 0]
+t4 = [t4 + 0]
+t5 = 1
+s1 = a3 - t5
+a3_stacksave = a3
+a2_stacksave = a2
+v11 = s2
+num_aux = t3
+a2 = a2_stacksave
+a3 = s1
+s2 = call t4()
+a3 = a3_stacksave
+t3 = num_aux
+s3 = a3 * s2
+t3 = s3
+v8_end:
+num_aux = t3
+return num_aux

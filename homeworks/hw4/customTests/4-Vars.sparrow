@@ -1,0 +1,41 @@
+func Mainmain()
+v0 = 4
+v1 = alloc(v0)
+v2 = 8
+vmt_A = alloc(v2)
+v3 = @Ahelper
+[vmt_A + 4 ] = v3
+v4 = @Arun
+[vmt_A + 0 ] = v4
+[v1 + 0] = vmt_A
+if0 v1 goto v1Error
+goto v1End
+v1Error:
+error("null pointer")
+v1End:
+v5 = [v1 + 0]
+v5 = [v5 + 0]
+v6 = call v5(v1)
+print(v6)
+trivial = 0
+return trivial
+func Arun(this)
+v7 = [this + 0]
+v7 = [v7 + 4]
+v9 = 12
+v8 = call v7(this v9)
+a = v8
+v10 = [this + 0]
+v10 = [v10 + 4]
+v12 = 15
+v11 = call v10(this v12)
+b = v11
+v13 = a + b
+return v13
+func Ahelper(this param)
+x = param
+v14 = 1
+v15 = param + v14
+param = v15
+print(x)
+return x

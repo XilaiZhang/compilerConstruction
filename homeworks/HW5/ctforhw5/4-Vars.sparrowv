@@ -1,0 +1,57 @@
+func Mainmain()
+t0 = 4
+t1 = alloc( t0 )
+t2 = 8
+t3 = alloc( t2 )
+t4 = @Ahelper
+[t3 + 4] = t4
+t5 = @Arun
+[t3 + 0] = t5
+[t1 + 0] = t3
+if0 t1 goto v1Error
+goto v1End
+v1Error:
+error("null pointer")
+v1End:
+s1 = [t1 + 0]
+s1 = [s1 + 0]
+v6 = s2
+a2 = t1
+s2 = call s1()
+print( s2)
+s3 = 0
+trivial = s3
+return trivial
+func Arun()
+t0 = [a2 + 0]
+t0 = [t0 + 4]
+t1 = 12
+a2_stacksave = a2
+v8 = t2
+a2 = a2_stacksave
+a3 = t1
+t2 = call t0()
+a2 = a2_stacksave
+t3 = t2
+t4 = [a2 + 0]
+t4 = [t4 + 4]
+t5 = 15
+a2_stacksave = a2
+a = t3
+v11 = s1
+a2 = a2_stacksave
+a3 = t5
+s1 = call t4()
+t3 = a
+s2 = s1
+s3 = t3 + s2
+v13 = s3
+return v13
+func Ahelper()
+t0 = a3
+t1 = 1
+t2 = a3 + t1
+a3 = t2
+print( t0)
+x = t0
+return x

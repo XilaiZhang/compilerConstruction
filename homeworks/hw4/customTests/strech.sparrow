@@ -1,0 +1,106 @@
+func Main()
+     v0 = @f
+     v1 = call v0()
+     print(v1)
+     return v1
+
+func f()
+     a = 10
+     b = 20
+     c = a + b
+     x = 30
+     y = a < x
+     if0 y goto L8
+     d = a + c
+     f = a + b
+     goto L10
+L8:  e = b + c
+     goto L14
+L10: fifty = 50
+     b = d + fifty
+     s = c+d
+     t = s+f
+     print(t)
+     e = c + f
+     forty = 40
+     b = b + forty
+     goto L8
+L14: ten = 10
+     f = a + ten
+L22: b = 55
+     twenty = 20
+     c = a - twenty
+     z = b < c
+     if0 z goto L20
+     d = c + b
+     e = d - ten
+     w = d+e
+     print(w)
+     b = c + e
+     two = 2
+     f = two - b
+     goto L22
+L20: seven = 7
+     b = f + seven
+     c = c + b
+     two = 2
+     e = two * c
+     g = f + ten
+     fiftyfive = 55
+     h = fiftyfive
+     v2 = @func_g
+     x = g < h
+     if0 x goto L27
+     i = g - twenty
+     h = call v2(b c d e f g h i)
+     j = i + h
+     goto L29
+L27: one = 1
+     k = g + one
+     j = two * k
+L29: five = 5
+     l = j - five
+     k = g + l
+     q = j-k
+     r = q+l
+     print(r)
+     i = j + k
+     c = c + d
+     m = d + twenty
+     n = i + m
+     s = d < n
+L3:  if0 s goto L12
+     o = d + m
+     thirty = 30
+     p = o + thirty
+     p = i - p
+     n = o - p
+     zero = 0
+     s = n * zero
+     m = c + g
+     n = o + n
+     u = m-n
+     print(u)
+     goto L3
+L12: g = k - n
+     g = o + g
+     return g
+
+func func_g(x1 x2 x3 x4 x5 x6 x7 x8)
+     a = x1 + x2
+     b = x3 + x4
+     c = x5 + x6 
+     d = x7 + x8
+     ten = 10
+     e = ten
+     v3 = x8 < x1
+     if0 v3 goto L42
+     v4 = @func_g
+     a = call v4(v3 x7 v3 x5 ten v3 x2 ten)
+L42: e = d - a
+     f = b * e 
+     g = c - f
+     h = d + e
+     i = e + f
+     j = g + h
+     return j

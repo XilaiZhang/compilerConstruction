@@ -1,0 +1,35 @@
+func Main()
+    v0 = 4
+    w0 = alloc(v0)
+    vmt_Fac = alloc(v0)
+    v0 = @FacComputeFac
+    [vmt_Fac + 0] = v0
+    v0 = vmt_Fac
+    [w0 + 0] = v0
+    if0 w0 goto null1
+    w1 = [w0 + 0]
+    w1 = [w1 + 0]
+    v0 = 6
+    w2 = call w1(w0 v0)
+    print(w2)
+    goto main_end
+  null1:
+      error("null pointer")
+  main_end:
+    return v0
+
+func FacComputeFac(this num)
+    v0 = 1
+    w0 = num < v0
+    if0 w0 goto if1_else
+      num_aux = 1
+      goto if1_end
+  if1_else:
+      w1 = [this + 0]
+      w1 = [w1 + 0]
+      v0 = 1
+      w2 = num - v0
+      w3 = call w1(this w2)
+      num_aux = num * w3
+  if1_end:
+    return num_aux

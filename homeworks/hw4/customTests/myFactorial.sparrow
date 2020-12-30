@@ -1,0 +1,37 @@
+func Factorialmain()
+v0 = 4
+v1 = alloc(v0)
+v2 = 4
+vmt_Fac = alloc(v2)
+v3 = @FacComputeFac
+[vmt_Fac + 0 ] = v3
+[v1 + 0] = vmt_Fac
+if0 v1 goto v1Error
+goto v1End
+v1Error:
+error("null pointer")
+v1End:
+v4 = [v1 + 0]
+v4 = [v4 + 0]
+v6 = 10
+v5 = call v4(v1 v6)
+print(v5)
+trivial = 0
+return trivial
+func FacComputeFac(this num)
+v7 = 1
+v8 = num < v7
+if0 v8 goto v8_else
+v9 = 1
+num_aux = v9
+goto v8_end
+v8_else:
+v10 = [this + 0]
+v10 = [v10 + 0]
+v12 = 1
+v13 = num - v12
+v11 = call v10(this v13)
+v14 = num * v11
+num_aux = v14
+v8_end:
+return num_aux

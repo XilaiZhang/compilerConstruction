@@ -1,0 +1,47 @@
+func Main()
+t0 = 4
+t1 = alloc( t0 )
+t2 = alloc( t0 )
+t0 = @FacComputeFac
+[t2 + 0] = t0
+t0 = t2
+[t1 + 0] = t0
+if0 t1 goto null1
+t3 = [t1 + 0]
+t3 = [t3 + 0]
+t0 = 6
+w2 = t4
+a2 = t1
+a3 = t0
+t4 = call t3()
+print( t4)
+goto main_end
+null1:
+error("null pointer")
+main_end:
+v0 = t0
+return v0
+func FacComputeFac()
+t0 = 1
+t1 = a3 < t0
+if0 t1 goto if1_else
+t2 = 1
+goto if1_end
+if1_else:
+t3 = [a2 + 0]
+t3 = [t3 + 0]
+t0 = 1
+t4 = a3 - t0
+a3_stacksave = a3
+a2_stacksave = a2
+num_aux = t2
+w3 = t5
+a2 = a2_stacksave
+a3 = t4
+t5 = call t3()
+a3 = a3_stacksave
+t2 = num_aux
+t2 = a3 * t5
+if1_end:
+num_aux = t2
+return num_aux

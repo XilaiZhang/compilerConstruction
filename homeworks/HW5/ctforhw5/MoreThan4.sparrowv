@@ -1,0 +1,76 @@
+func MoreThan4main()
+t0 = 4
+t1 = alloc( t0 )
+t2 = 8
+t3 = alloc( t2 )
+t4 = @MT4Start
+[t3 + 0] = t4
+t5 = @MT4Change
+[t3 + 4] = t5
+[t1 + 0] = t3
+if0 t1 goto v1Error
+goto v1End
+v1Error:
+error("null pointer")
+v1End:
+s1 = [t1 + 0]
+s1 = [s1 + 0]
+s2 = 1
+s3 = 2
+s4 = 3
+s5 = 4
+s6 = 5
+s7 = 6
+v6 = s8
+a2 = t1
+a3 = s2
+a4 = s3
+a5 = s4
+a6 = s5
+a7 = s6
+a8 = s7
+s8 = call s1( a8)
+print( s8)
+t0 = 0
+trivial = t0
+return trivial
+func MT4Start( p6)
+t0 = p6
+print( a3)
+print( a4)
+print( a5)
+print( a6)
+print( a7)
+print( t0)
+t1 = [a2 + 0]
+t1 = [t1 + 4]
+a3_stacksave = a3
+a4_stacksave = a4
+a5_stacksave = a5
+a6_stacksave = a6
+a7_stacksave = a7
+a2_stacksave = a2
+v14 = t2
+a2 = a2_stacksave
+a3 = t0
+a4 = a7_stacksave
+a5 = a6_stacksave
+a6 = a5_stacksave
+a7 = a4_stacksave
+s11 = a3_stacksave
+a8 = s11
+t2 = call t1( a8)
+t3 = t2
+aux = t3
+return aux
+func MT4Change( p6)
+t0 = p6
+print( a3)
+print( a4)
+print( a5)
+print( a6)
+print( a7)
+print( t0)
+t1 = 0
+v15 = t1
+return v15

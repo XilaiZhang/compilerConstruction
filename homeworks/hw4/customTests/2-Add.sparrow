@@ -1,0 +1,7 @@
+func Mainmain()
+v0 = 12
+v1 = 21
+v2 = v0 + v1
+print(v2)
+trivial = 0
+return trivial
