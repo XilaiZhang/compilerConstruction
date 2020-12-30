@@ -1,0 +1,76 @@
+func Main()
+t0 = 4
+v0 = t0
+t1 = v0
+t0 = alloc(t1)
+w0 = t0
+t1 = v0
+t0 = alloc(t1)
+vmt_Fac = t0
+t0 = @FacComputeFac
+v0 = t0
+t0 = vmt_Fac
+t1 = v0
+[t0 + 0] = t1
+t1 = vmt_Fac
+v0 = t1
+t0 = w0
+t1 = v0
+[t0 + 0] = t1
+t1 = w0
+if0 t1 goto null1
+t1 = w0
+t0 = [t1 + 0]
+w1 = t0
+t1 = w1
+t0 = [t1 + 0]
+w1 = t0
+t0 = 6
+v0 = t0
+t1 = w1
+t0 = call t1(w0 v0)
+w2 = t0
+t1 = w2
+print(t1)
+goto main_end
+null1:
+error("null pointer")
+main_end:
+      return v0
+
+func FacComputeFac(this num)
+t0 = 1
+v0 = t0
+t1 = num
+t2 = v0
+t0 = t1 < t2
+w0 = t0
+t1 = w0
+if0 t1 goto if1_else
+t0 = 1
+num_aux = t0
+goto if1_end
+if1_else:
+t1 = this
+t0 = [t1 + 0]
+w1 = t0
+t1 = w1
+t0 = [t1 + 0]
+w1 = t0
+t0 = 1
+v0 = t0
+t1 = num
+t2 = v0
+t0 = t1 - t2
+w2 = t0
+t1 = w1
+t0 = call t1(this w2)
+w3 = t0
+t1 = num
+t2 = w3
+t0 = t1 * t2
+num_aux = t0
+if1_end:
+      return num_aux
+
+

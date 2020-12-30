@@ -1,0 +1,327 @@
+func Main()
+t0 = @f
+v0 = t0
+t1 = v0
+t0 = call t1()
+v1 = t0
+t1 = v1
+print(t1)
+      return v1
+
+func f()
+t0 = 10
+a = t0
+t0 = 20
+b = t0
+t1 = a
+t2 = b
+t0 = t1 + t2
+c = t0
+t0 = 30
+x = t0
+t1 = a
+t2 = x
+t0 = t1 < t2
+y = t0
+t1 = y
+if0 t1 goto L8
+t1 = a
+t2 = c
+t0 = t1 + t2
+d = t0
+t1 = a
+t2 = b
+t0 = t1 + t2
+f = t0
+goto L10
+L8:
+t1 = b
+t2 = c
+t0 = t1 + t2
+e = t0
+goto L14
+L10:
+t0 = 50
+fifty = t0
+t1 = d
+t2 = fifty
+t0 = t1 + t2
+b = t0
+t1 = c
+t2 = d
+t0 = t1 + t2
+s = t0
+t1 = s
+t2 = f
+t0 = t1 + t2
+t = t0
+t1 = t
+print(t1)
+t1 = c
+t2 = f
+t0 = t1 + t2
+e = t0
+t0 = 40
+forty = t0
+t1 = b
+t2 = forty
+t0 = t1 + t2
+b = t0
+goto L8
+L14:
+t0 = 10
+ten = t0
+t1 = a
+t2 = ten
+t0 = t1 + t2
+f = t0
+L22:
+t0 = 55
+b = t0
+t0 = 20
+twenty = t0
+t1 = a
+t2 = twenty
+t0 = t1 - t2
+c = t0
+t1 = b
+t2 = c
+t0 = t1 < t2
+z = t0
+t1 = z
+if0 t1 goto L20
+t1 = c
+t2 = b
+t0 = t1 + t2
+d = t0
+t1 = d
+t2 = ten
+t0 = t1 - t2
+e = t0
+t1 = d
+t2 = e
+t0 = t1 + t2
+w = t0
+t1 = w
+print(t1)
+t1 = c
+t2 = e
+t0 = t1 + t2
+b = t0
+t0 = 2
+two = t0
+t1 = two
+t2 = b
+t0 = t1 - t2
+f = t0
+goto L22
+L20:
+t0 = 7
+seven = t0
+t1 = f
+t2 = seven
+t0 = t1 + t2
+b = t0
+t1 = c
+t2 = b
+t0 = t1 + t2
+c = t0
+t0 = 2
+two = t0
+t1 = two
+t2 = c
+t0 = t1 * t2
+e = t0
+t1 = f
+t2 = ten
+t0 = t1 + t2
+g = t0
+t0 = 55
+fiftyfive = t0
+t1 = fiftyfive
+h = t1
+t0 = @g
+v2 = t0
+t1 = g
+t2 = h
+t0 = t1 < t2
+x = t0
+t1 = x
+if0 t1 goto L27
+t1 = g
+t2 = twenty
+t0 = t1 - t2
+i = t0
+t1 = v2
+t0 = call t1(b c d e f g h i)
+h = t0
+t1 = i
+t2 = h
+t0 = t1 + t2
+j = t0
+goto L29
+L27:
+t0 = 1
+one = t0
+t1 = g
+t2 = one
+t0 = t1 + t2
+k = t0
+t1 = two
+t2 = k
+t0 = t1 * t2
+j = t0
+L29:
+t0 = 5
+five = t0
+t1 = j
+t2 = five
+t0 = t1 - t2
+l = t0
+t1 = g
+t2 = l
+t0 = t1 + t2
+k = t0
+t1 = j
+t2 = k
+t0 = t1 - t2
+q = t0
+t1 = q
+t2 = l
+t0 = t1 + t2
+r = t0
+t1 = r
+print(t1)
+t1 = j
+t2 = k
+t0 = t1 + t2
+i = t0
+t1 = c
+t2 = d
+t0 = t1 + t2
+c = t0
+t1 = d
+t2 = twenty
+t0 = t1 + t2
+m = t0
+t1 = i
+t2 = m
+t0 = t1 + t2
+n = t0
+t1 = d
+t2 = n
+t0 = t1 < t2
+s = t0
+L3:
+t1 = s
+if0 t1 goto L12
+t1 = d
+t2 = m
+t0 = t1 + t2
+o = t0
+t0 = 30
+thirty = t0
+t1 = o
+t2 = thirty
+t0 = t1 + t2
+p = t0
+t1 = i
+t2 = p
+t0 = t1 - t2
+p = t0
+t1 = o
+t2 = p
+t0 = t1 - t2
+n = t0
+t0 = 0
+zero = t0
+t1 = n
+t2 = zero
+t0 = t1 * t2
+s = t0
+t1 = c
+t2 = g
+t0 = t1 + t2
+m = t0
+t1 = o
+t2 = n
+t0 = t1 + t2
+n = t0
+t1 = m
+t2 = n
+t0 = t1 - t2
+u = t0
+t1 = u
+print(t1)
+goto L3
+L12:
+t1 = k
+t2 = n
+t0 = t1 - t2
+g = t0
+t1 = o
+t2 = g
+t0 = t1 + t2
+g = t0
+      return g
+
+func g(x1 x2 x3 x4 x5 x6 x7 x8)
+t1 = x1
+t2 = x2
+t0 = t1 + t2
+a = t0
+t1 = x3
+t2 = x4
+t0 = t1 + t2
+b = t0
+t1 = x5
+t2 = x6
+t0 = t1 + t2
+c = t0
+t1 = x7
+t2 = x8
+t0 = t1 + t2
+d = t0
+t0 = 10
+ten = t0
+t1 = ten
+e = t1
+t1 = x8
+t2 = x1
+t0 = t1 < t2
+v3 = t0
+t1 = v3
+if0 t1 goto L42
+t0 = @g
+v4 = t0
+t1 = v4
+t0 = call t1(v3 x7 v3 x5 ten v3 x2 ten)
+a = t0
+L42:
+t1 = d
+t2 = a
+t0 = t1 - t2
+e = t0
+t1 = b
+t2 = e
+t0 = t1 * t2
+f = t0
+t1 = c
+t2 = f
+t0 = t1 - t2
+g = t0
+t1 = d
+t2 = e
+t0 = t1 + t2
+h = t0
+t1 = e
+t2 = f
+t0 = t1 + t2
+i = t0
+t1 = g
+t2 = h
+t0 = t1 + t2
+j = t0
+      return j
+
+

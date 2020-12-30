@@ -1,0 +1,10 @@
+{ 
+  if (true)
+    System.out.println(!false);
+  else 
+    System.out.println(false);
+  while (true) {
+    System.out.println(!!false);
+    System.out.println(true);
+  }
+}

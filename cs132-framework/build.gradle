@@ -1,0 +1,77 @@
+apply plugin: 'java'
+
+def mainClass () {
+    switch (homework) {
+        case "hw1":
+            return "Parse"
+        case "hw2":
+            return "Typecheck"
+        case "hw3":
+            return "J2S"
+        case "hw4":
+            return "S2SV"
+        case "hw5":
+            return "SV2V"
+        default:
+            throw new Exception("Didn't reconize homework='" + homework +"', remember to set it in gradle.properties");
+    }
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    // Use JUnit test framework
+    testCompile 'junit:junit:4.12'
+}
+
+repositories {
+   flatDir {
+       dirs 'lib'
+   }
+}
+
+dependencies {
+    compile name: 'cs132'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir "src/main/java"
+        }
+    }
+    test {
+        java {
+            srcDir "src/test/java"
+        }
+    }
+}
+
+test { 
+  testLogging { 
+    showStandardStreams = true
+  }
+}
+
+task run (type: JavaExec) { 
+    standardInput = System.in
+    main = mainClass()
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+task sourcesTar(type: Tar, dependsOn: classes) {
+    from sourceSets.main.allJava
+}
+
+task pregrade(type: Exec) {
+    dependsOn sourcesTar, test
+    executable "bash"
+    args "./grade.sh", homework, ".", 
+      "testcases/${homework}", "build/distributions/${rootProject.name}.tar"
+}
+
+artifacts {
+    archives sourcesTar
+}

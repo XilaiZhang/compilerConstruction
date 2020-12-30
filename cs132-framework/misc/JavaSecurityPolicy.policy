@@ -1,0 +1,10 @@
+// We use a security policy file to make sure the student's program
+// doesn't access the file system or network.  But we do grant some
+// safe permissions.
+
+grant {
+	// Allow the program to figure out what the system line separator
+	// character is.  JavaCC does this when printing out parse error
+	// messages.
+	permission java.util.PropertyPermission "line.separator", "read" ;
+};
